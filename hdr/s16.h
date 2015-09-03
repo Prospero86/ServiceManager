@@ -1,6 +1,10 @@
 #ifndef _S16_H_
 #define _S16_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "list.h"
 #include "repositoryd_rpc.h"
 
@@ -69,5 +73,9 @@ void destroy_svcs_list (svc_list box);
     }
 
 #define StartsWith(text, prefix) !strncmp (text, prefix, strlen (prefix))
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
